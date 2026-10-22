@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import NavLinks from './NavLinks';
 const Header = () => {
 
     const date = new Date().toLocaleDateString
@@ -9,8 +10,9 @@ const Header = () => {
 
 
     return (
+        <header className='relative mx-auto max-w-7xl px-4 py-4'>
         <div className='flex justify-between'>
-            <div className='flex items-center gap-2'>
+            <div className='flex flex-col items-center gap-1 sm:flex-row'>
                 <Image className="w-10 h-10 bg-green-800" height={50} width={50} src={'/logo-icon.png'} alt=""
                 />
                 <div>
@@ -25,6 +27,9 @@ const Header = () => {
         </div>
 
         </div>
+
+        <NavLinks/>
+        </header>
     );
 };
 
